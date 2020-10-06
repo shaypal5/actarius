@@ -2,7 +2,7 @@ actarius
 #####
 
 
-|PyPI-Status| |Downloads| |PyPI-Versions| |Build-Status| |Codecov| |Codefactor| |LICENCE|
+|PyPI-Status| |PyPI-Versions| |Build-Status| |Codecov| |Codefactor| |LICENCE|
 
 Opinionated wrappers for the mlflow tracking API.
 
@@ -126,3 +126,30 @@ The project is documented using the `numpy docstring conventions`_, which were c
 .. _`these conventions`: https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt
 
 Additionally, if you update this ``README.rst`` file,  use ``python setup.py checkdocs`` to validate it compiles.
+
+
+Credits
+=======
+Created by Shay Palachy  (shay.palachy@gmail.com).
+
+
+.. .. # ==== Badges code ====
+
+.. |PyPI-Status| image:: https://img.shields.io/pypi/v/actarius.svg
+  :target: https://pypi.org/project/actarius
+
+.. |PyPI-Versions| image:: https://img.shields.io/pypi/pyversions/actarius.svg
+   :target: https://pypi.org/project/actarius
+
+.. |Build-Status| image:: https://travis-ci.org/actarius/actarius.svg?branch=master
+  :target: https://travis-ci.org/actarius/actarius
+
+.. |Codecov| image:: https://codecov.io/github/actarius/actarius/coverage.svg?branch=master
+   :target: https://codecov.io/github/actarius/actarius?branch=master
+
+.. |Codefactor| image:: https://www.codefactor.io/repository/github/actarius/actarius/badge?style=plastic
+     :target: https://www.codefactor.io/repository/github/actarius/actarius
+     :alt: Codefactor code quality
+
+.. |LICENCE| image:: https://img.shields.io/badge/License-MIT-ff69b4.svg
+  :target: https://pypi.python.org/pypi/actarius
