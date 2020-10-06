@@ -1,5 +1,7 @@
 """Configuration for actarius."""
 
+import os
+
 import birch
 
 
@@ -19,3 +21,6 @@ CFG = birch.Birch(
 
 
 PRINT_STACKTRACE = CFG[CfgKey.PRINT_STACKTRACE]
+
+TEMP_DIR = CFG.xdg_cache_dpath()
+os.makedirs(TEMP_DIR, exist_ok=True)

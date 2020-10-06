@@ -19,7 +19,10 @@ from .shared import (
     DoubleLogger,
     set_shared_tags,
 )
-from .cfg import PRINT_STACKTRACE
+from .cfg import (
+    TEMP_DIR,
+    PRINT_STACKTRACE,
+)
 
 
 class ExperimentRun(object):
@@ -50,7 +53,7 @@ class ExperimentRun(object):
         self.nested = nested
         self.temp_run_id = random.randint(1, 999999)
         self.log_fpath = os.path.expanduser(
-            '~/temp/log_mlflow_run_{}.txt'.format(self.temp_run_id))
+            f'~/{TEMP_DIR}/log_mlflow_run_{self.temp_run_id}.txt')
         os.makedirs(os.path.expanduser('~/temp'), exist_ok=True)
         self.logger = DoubleLogger(self.log_fpath)
         self.artifactory = ArgusArtifactory(

@@ -5,7 +5,6 @@ import time
 # import atexit
 import warnings
 import traceback
-from tempfile import mkdtemp
 
 import mlflow
 from mlflow.exceptions import MlflowException
@@ -17,7 +16,10 @@ from .shared import (
     DoubleLogger,
     set_shared_tags,
 )
-from .cfg import PRINT_STACKTRACE
+from .cfg import (
+    TEMP_DIR,
+    PRINT_STACKTRACE,
+)
 
 
 class ExperimentRunContext(object):
@@ -76,8 +78,7 @@ class ExperimentRunContext(object):
             return
         self.mlflow_run = mlflow.start_run()
         self.run_id = self.mlflow_run .info.run_id
-        self.temp_dpath = mkdtemp()
-        self.log_fpath = f'{self.temp_dpath}/log_mlflow_run_{self.run_id}.txt'
+        self.log_fpath = f'{TEMP_DIR}/log_mlflow_run_{self.run_id}.txt'
         os.makedirs(os.path.expanduser('~/temp'), exist_ok=True)
         self.logger = DoubleLogger(self.log_fpath)
         self.artifactory = ArgusArtifactory(
