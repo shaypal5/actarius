@@ -47,8 +47,7 @@ This context manager should be provided with some basic parameters that configur
 .. code-block:: python
 
   from actarius import ExperimentRunContext, log_df
-  expr_databricks_path = 'Shared/experiments/pattern_generation/run_org'
-  with ExperimentRunContext(expr_databricks_path):
+  with ExperimentRunContext('my_experiment_name'):
     mlflow.set_tags({'some_tag': 45})
     mlflow.log_params({'alpha': 0.5, 'beta': 0.2})
     # run experiment code...
@@ -61,8 +60,7 @@ This context manager should be provided with some basic parameters that configur
 .. code-block:: python
 
   from actarius import ExperimentRun
-  expr_databricks_path = 'Shared/experiments/pattern_generation/run_org'
-  exp_obj = ExperimentRun(expr_databricks_path)
+  exp_obj = ExperimentRun('my_experiment_name')
   exp_obj.set_tags({'some_tag': 45})
   exp_obj.log_params({'alpha': 0.5, 'beta': 0.2})
   # run experiment code...
