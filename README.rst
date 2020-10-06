@@ -126,6 +126,11 @@ The project is documented using the `numpy docstring conventions`_, which were c
 Additionally, if you update this ``README.rst`` file,  use ``python setup.py checkdocs`` to validate it compiles.
 
 
+Etymology
+=========
+
+`Actarius <https://latin-dictionary.net/definition/632/actarius-actarii>`_ is one Latin term for a registrar or a book-keeper.
+
 Credits
 =======
 Created by Shay Palachy  (shay.palachy@gmail.com).
