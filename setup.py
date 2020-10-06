@@ -13,7 +13,7 @@ INSTALL_REQUIRES = [
     'birch>=0.0.31',
 ]
 TEST_REQUIRES = [
-    'pandas',
+    'pandas', 'databricks-cli',
     # testing and coverage
     'pytest>=4.6', 'coverage', 'pytest-cov==2.5.1',
     'boto3',  # to upload the coverage badge to S3
