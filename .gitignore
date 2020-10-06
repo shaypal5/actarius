@@ -122,3 +122,7 @@ mlflow_artifacts_*
 
 mlruns/*
 mlruns
+
+# for test-only env vars
+temp_env_var.py
+*/temp_env_var.py
