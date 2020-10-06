@@ -1,0 +1,2 @@
+include versioneer.py
+include actarius/_version.py
